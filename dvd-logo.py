@@ -66,7 +66,6 @@ while not sair:
             if event.key == pg.K_ESCAPE:
                 sair = True
     if env.bounce(pos_x,pos_y)[0]:
-        print('oi')
         vel_x = -1*vel_x
         bounce_count += 1
     
