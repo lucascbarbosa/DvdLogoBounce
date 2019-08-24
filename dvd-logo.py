@@ -1,5 +1,4 @@
 import pygame as pg
-
 try:
     pg.init()
 except :
@@ -78,12 +77,10 @@ while not sair:
     string_count = 'Bounces = %i'%(bounce_count)
     textCount_size = myfont.size(string_count)
     text_bounceCount = myfont.render(string_count, False, env.red)
-    textCount_rect = text_bounceCount.get_rect(center = (width - textCount_size[0]/2,textCount_size[1]/2+textBounces_size[1]))
+    textCount_rect = text_bounceCount.get_rect(center = (width - textCount_size[0]/2,textCount_size[1]/2))
     pos_x += vel_x
     pos_y += vel_y
-    env.screen.blit(text_bounces,textBounce_rect)
     env.screen.blit(text_bounceCount,textCount_rect)
     pg.display.update()
     env.screen.fill(env.black)
     env.clock.tick(15000)
-
